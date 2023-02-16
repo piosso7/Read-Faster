@@ -14,6 +14,8 @@ const fontButtonMinus = document.getElementById('fontButtonMinus');
 const readSpeedPlus = document.getElementById('readSpeedPlus');
 const readSpeedMinus = document.getElementById('readSpeedMinus');
 
+let textArray;
+
 let outputFontSize = 3;
 
 let counter = 1;
@@ -21,6 +23,8 @@ let counter = 1;
 let readSpeed = 1000;
 
 let wordPerMinute;
+
+//Speed calc function
 
 function speedCalc() {
   if (readSpeed <= 0) {
@@ -32,15 +36,16 @@ function speedCalc() {
     speed.textContent = 'Read speed is ' + wordPerMinute + ' words per minute';
   }
 }
-
 speedCalc();
 
-let textArray;
+// Display word by word function
 
 function outputFunction() {
   output.textContent = textArray[counter];
   counter++;
 }
+
+//Read start function
 
 readButton.addEventListener('click', function () {
   textArray = text.value.split(' ');
@@ -53,6 +58,8 @@ readButton.addEventListener('click', function () {
     }
   }, readSpeed);
 });
+
+//Theme change
 
 darkButton.addEventListener('click', () => {
   body.classList.remove('light');
