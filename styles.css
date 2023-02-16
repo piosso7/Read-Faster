@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body.light {
+  background-color: white;
+}
+
+body.dark {
+  background-color: black;
+}
+.speed {
+  color: red;
+  font-size: 3vh;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+}
+
+.light.textWrapper {
+  background-color: white;
+}
+.dark.textWrapper {
+  background-color: black;
+}
+
+.textWrapper p {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.light.textWrapper p {
+  color: black;
+}
+.dark.textWrapper p {
+  color: white;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.light.inputWrapper {
+  background-color: white;
+}
+.dark.inputWrapper {
+  background-color: black;
+}
+.inputWrapper textarea {
+  font-size: 3vh;
+  min-width: 90%;
+  min-height: 60%;
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 20px;
+  padding: 2%;
+}
+.light.inputWrapper textarea {
+  background-color: white;
+  color: black;
+}
+.dark.inputWrapper textarea {
+  background-color: black;
+  color: white;
+}
+.inputWrapper button {
+  font-size: 3vh;
+  height: 10%;
+  width: 90%;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 1%;
+}
+.inputWrapper button.light {
+  background-color: rgb(170, 206, 170);
+  color: black;
+}
+.inputWrapper button.dark {
+  background-color: rgb(170, 206, 170);
+  color: white;
+}
+
+.themeWrapper {
+  height: 10%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.themeWrapper button {
+  font-size: 3vh;
+  height: 100%;
+  width: 45%;
+}
+
+.themeDark {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.themeLight {
+  background-color: rgb(179, 179, 179);
+  color: black;
+  cursor: pointer;
+}
+.fontButton {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
