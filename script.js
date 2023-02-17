@@ -18,9 +18,9 @@ let textArray;
 
 let outputFontSize = 3;
 
-let counter = 1;
+let counter = 0;
 
-let readSpeed = 1000;
+let readSpeed = 500;
 
 let wordPerMinute;
 
@@ -53,8 +53,12 @@ readButton.addEventListener('click', function () {
     if (counter < textArray.length) {
       outputFunction();
     } else {
+      counter = 0;
+      text.value = '';
+      textArray = text.value;
+      output.textContent = 'Paste another text below.';
       clearInterval(textInterval);
-      window.location.reload();
+      // window.location.reload();
     }
   }, readSpeed);
 });
